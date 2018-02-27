@@ -47,7 +47,7 @@ app.get('/api/v1/colleges/:id', (request, response) => {
       college.length
         ? response.status(200).json(college)
         : response.status(404).json({
-          error: `No college found with id: ${id}.`
+          error: `No college found with ID: ${id}.`
         })
     )
     .catch(error => response.status(500).json({ error }));
@@ -58,6 +58,22 @@ app.get('/api/v1/colleges/:id', (request, response) => {
 app.get('/api/v1/favorites', (request, response) => {
   database('create_favorites').select()
     .then(favorites => response.status(200).json(favorites))
+    .catch(error => response.status(500).json({ error }));
+});
+
+// GET REQUEST FAVORITES BY ID
+
+app.get('/api/v1/favorites/:id', (request, response) => {
+  const id = request.params.id;
+
+  database('create_favorites').where({ id }).select()
+    .then(favorite =>
+      favorite.length
+        ? response.status(200).json(favorite)
+        : response.status(422).json({
+          error: `No favorite found with ID: ${id}.`
+        })
+    )
     .catch(error => response.status(500).json({ error }));
 });
 
