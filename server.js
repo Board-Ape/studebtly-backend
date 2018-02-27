@@ -47,8 +47,72 @@ app.get('/api/v1/colleges/:id', (request, response) => {
       college.length
         ? response.status(200).json(college)
         : response.status(404).json({
-          error: `No college found with id: ${id}.`
+          error: `No college found with ID: ${id}.`
         })
+    )
+    .catch(error => response.status(500).json({ error }));
+});
+
+// GET REQUEST FOR ALL FAVORITES
+
+app.get('/api/v1/favorites', (request, response) => {
+  database('create_favorites').select()
+    .then(favorites => response.status(200).json(favorites))
+    .catch(error => response.status(500).json({ error }));
+});
+
+// GET REQUEST FAVORITES BY ID
+
+app.get('/api/v1/favorites/:id', (request, response) => {
+  const id = request.params.id;
+
+  database('create_favorites').where({ id }).select()
+    .then(favorite =>
+      favorite.length
+        ? response.status(200).json(favorite)
+        : response.status(422).json({
+          error: `No favorite found with ID: ${id}.`
+        })
+    )
+    .catch(error => response.status(500).json({ error }));
+});
+
+// POST REQUEST TO FAVORITES
+
+app.post('/api/v1/favorites', (request, response) => {
+  let body = request.body;
+
+  for (let requiredParameter of [
+    'name',
+    'tuition_in_state',
+    'tuition_out_of_state',
+    'state',
+    'city',
+    'zip',
+    'url'
+  ]) {
+    if (!body[requiredParameter]) {
+      return response.status(422).json(
+        { error: `Favorite is missing ${requiredParameter} property` }
+      );
+    }
+  }
+
+  return database('create_favorites').insert(body, '*')
+    .then(favorite => response.status(201).json(favorite[0]))
+    .catch(error => response.status(500).json({ error }));
+});
+
+// DELETE REQUEST FROM FAVORITES
+
+app.delete('/api/v1/favorites/:id', (request, response) => {
+  const id = request.params.id;
+
+  database('create_favorites').where({ id }).del()
+    .then(favorite =>
+      favorite
+        ? response.sendStatus(204)
+        : response.sendStatus(404).json({ error: `Not found` })
     )
     .catch(error => response.status(500).json({ error }));
 });
