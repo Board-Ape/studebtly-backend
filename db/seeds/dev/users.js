@@ -45,9 +45,12 @@ exports.seed = function(knex, Promise) {
               }
             ]);
           })
+          // eslint-disable-next-line
           .then(() => console.log('Seeding complete!'))
+          // eslint-disable-next-line
           .catch(error => console.log(`Error seeding data: ${error}`))
       ]);
     })
+    // eslint-disable-next-line
     .catch(error => console.log(`Error seeding data: ${error}`));
 };

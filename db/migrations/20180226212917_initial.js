@@ -17,13 +17,13 @@ exports.up = function(knex, Promise) {
       table.string('city');
       table.string('zip');
       table.string('url');
-      table.integer('user_id').unsigned()
+      table.integer('user_id').unsigned();
       table.foreign('user_id')
         .references('users.id');
 
       table.timestamps(true, true);
     })
-  ])
+  ]);
 };
 
 
