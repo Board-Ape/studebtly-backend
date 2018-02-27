@@ -77,6 +77,8 @@ app.get('/api/v1/favorites/:id', (request, response) => {
     .catch(error => response.status(500).json({ error }));
 });
 
+// POST REQUEST TO FAVORITES
+
 app.post('/api/v1/favorites', (request, response) => {
   let body = request.body;
 
@@ -98,6 +100,20 @@ app.post('/api/v1/favorites', (request, response) => {
 
   return database('create_favorites').insert(body, '*')
     .then(favorite => response.status(201).json(favorite[0]))
+    .catch(error => response.status(500).json({ error }));
+});
+
+// DELETE REQUEST FROM FAVORITES
+
+app.delete('/api/v1/favorites/:id', (request, response) => {
+  const id = request.params.id;
+
+  database('create_favorites').where({ id }).del()
+    .then(favorite =>
+      favorite
+        ? response.sendStatus(204)
+        : response.sendStatus(404).json({ error: `Not found` })
+    )
     .catch(error => response.status(500).json({ error }));
 });
 
