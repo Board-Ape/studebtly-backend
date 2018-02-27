@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 import './App.css';
 import NavBar from '../../components/NavBar/NavBar';
-import Landing from '../../components/Landing/Landing';
+import HomePage from '../../components/HomePage/HomePage';
 import SchoolCardContainer from '../../containers/SchoolCardContainer/SchoolCardContainer';
 
 class App extends Component {
@@ -10,7 +10,7 @@ class App extends Component {
     return (
       <div className="App">
         <Route path="/" component={NavBar} />
-        <Route exact path="/" component={Landing} />
+        <Route exact path="/" component={HomePage} />
         <Route exact path="/colleges" component={SchoolCardContainer} />
       </div>
     );
