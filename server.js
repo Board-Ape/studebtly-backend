@@ -38,6 +38,21 @@ app.get('/api/v1/colleges', (request, response) => {
     .catch(error => response.status(500).json({ error }));
 });
 
+// GET REQUEST FOR COLLEGES BY ID
+app.get('/api/v1/colleges/:id', (request, response) => {
+  const id  = request.params.id;
+
+  database('colleges').where({ id }).select()
+    .then(college =>
+      college.length
+        ? response.status(200).json(college)
+        : response.status(404).json({
+          error: `No college found with id: ${id}.`
+        })
+    )
+    .catch(error => response.status(500).json({ error }));
+});
+
 app.listen(app.get('port'), () => {
   //eslint-disable-next-line
   console.log(`${app.locals.title} is running on ${app.get('port')}.`);
