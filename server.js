@@ -25,7 +25,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.locals.title = 'Studebtly';
 
-app.get('/api/v1', function(request, response) {
+app.get('/', function(request, response) {
   response.sendFile(
     path.resolve(__dirname, './studebtly-frontend/build', 'index.html')
   );

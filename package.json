@@ -5,7 +5,7 @@
   "main": "dataRequest.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "concurrently \"npm run server\" \"cd drinks-frontend && npm start\"",
+    "start": "concurrently \"npm run server\" \"cd studebtly-frontend && npm start\"",
     "server": "nodemon server.js",
     "client": "node start-client.js"
   },
