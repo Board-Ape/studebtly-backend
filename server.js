@@ -77,6 +77,30 @@ app.get('/api/v1/favorites/:id', (request, response) => {
     .catch(error => response.status(500).json({ error }));
 });
 
+app.post('/api/v1/favorites', (request, response) => {
+  let body = request.body;
+
+  for (let requiredParameter of [
+    'name',
+    'tuition_in_state',
+    'tuition_out_of_state',
+    'state',
+    'city',
+    'zip',
+    'url'
+  ]) {
+    if (!body[requiredParameter]) {
+      return response.status(422).json(
+        { error: `Favorite is missing ${requiredParameter} property` }
+      );
+    }
+  }
+
+  return database('create_favorites').insert(body, '*')
+    .then(favorite => response.status(201).json(favorite[0]))
+    .catch(error => response.status(500).json({ error }));
+});
+
 app.listen(app.get('port'), () => {
   //eslint-disable-next-line
   console.log(`${app.locals.title} is running on ${app.get('port')}.`);
