@@ -2,8 +2,9 @@ import React from 'react';
 import './CollegesCard.css';
 import PropTypes from 'prop-types';
 
-const CollegesCard = ({ colleges }) => {
-  const { name, id, tuition_in_state, tuition_out_of_state, city, state, zip, url } = colleges;
+const CollegesCard = ({ college }) => {
+  console.log(college);
+  const { name, id, tuition_in_state, tuition_out_of_state, city, state, zip, url } = college;
   return (
     <div className='all-cards-container' id={id}>
       <div className='all-cards'>

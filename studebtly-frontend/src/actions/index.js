@@ -6,7 +6,6 @@ export const getColleges = (collegesArray) => ({
 });
 
 export const fetchColleges = () => async(dispatch) => {
-  console.log('Inside fetchColleges');
   const parsedResponse = await fetchCollegesData();
   dispatch(getColleges(parsedResponse));
 };

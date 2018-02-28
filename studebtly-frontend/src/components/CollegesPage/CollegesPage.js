@@ -31,9 +31,9 @@ class CollegesPage extends Component {
     return (
       <section id='colleges-container'>
         <section id='college-container'>
+          {this.createCollegesCard()}
         </section>
       </section>
-
     );
   }
 }
@@ -44,7 +44,7 @@ CollegesPage.propTypes = {
 };
 
 const mapStateToProps = store => ({
-  colleges: store.colleges
+  colleges: store.collegesData
 });
 
 const mapDispatchToProps = dispatch => ({
