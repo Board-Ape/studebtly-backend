@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import './CollegesCard.css';
 import PropTypes from 'prop-types';
 
@@ -9,7 +9,7 @@ const CollegesCard = ({ colleges }) => {
       <div className='all-cards'>
         <h1 className='school school-name'>{name}</h1>
         <h3 className='school location school-state'>
-          <img className='placeholder-icon' src={require('./placeholder.png')}/> {city}, {state}. {zip}
+          <img className='placeholder-icon' src={require('./placeholder.png')} alt="Location icon png"/> {city}, {state}. {zip}
         </h3>
         <h2 className='school school-in-state-tuition'>Tuition In-State: ${tuition_in_state}</h2>
         <h2 className='school school-out-of-state-tuition'>Tuition Out-Of-State: ${tuition_out_of_state}</h2>

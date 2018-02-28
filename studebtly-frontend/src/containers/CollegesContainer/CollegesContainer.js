@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import './CollegesContainer.css';
 import { fetchColleges } from '../../actions';
 import { connect } from 'react-redux';
-import CollegesCard from '../Components/CollegesCard/CollegesCard';
+import CollegesCard from '../../components/CollegesCard/CollegesCard';
 
 class CollegesContainer extends Component {
   constructor() {
@@ -15,6 +15,7 @@ class CollegesContainer extends Component {
   }
 
   componentDidMount() {
+    console.log('hello');
     this.props.fetchColleges();
   }
 
@@ -29,8 +30,6 @@ class CollegesContainer extends Component {
     const { title, description } = this.state;
     return (
       <section id='colleges-container'>
-      //decide whether you want to make a header title here or component
-        <Header title={title} description={description} />
         <section id='college-container'>
           {
             this.createCollegesCard()
@@ -48,7 +47,7 @@ CollegesContainer.propTypes = {
 };
 
 const mapStateToProps = store => ({
-  bottles: store.colleges
+  colleges: store.colleges
 });
 
 const mapDispatchToProps = dispatch => ({
