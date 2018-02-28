@@ -14,8 +14,9 @@ class CollegesPage extends Component {
     };
   }
 
-  componentDidMount() {
-    this.props.fetchColleges();
+  componentDidMount = async () => {
+    const collegesArray = await fetchColleges();
+    this.props.storeColleges(collegesArray);
   }
 
   createCollegesCard = () => {
@@ -30,9 +31,6 @@ class CollegesPage extends Component {
     return (
       <section id='colleges-container'>
         <section id='college-container'>
-          {
-            this.createCollegesCard()
-          }
         </section>
       </section>
 
@@ -41,7 +39,7 @@ class CollegesPage extends Component {
 }
 
 CollegesPage.propTypes = {
-  fetchColleges: PropTypes.func,
+  storeColleges: PropTypes.func,
   colleges: PropTypes.array
 };
 
@@ -50,7 +48,7 @@ const mapStateToProps = store => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  fetchColleges: () => dispatch(fetchColleges())
+  storeColleges: (colleges) => dispatch(fetchColleges(colleges))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(CollegesPage);

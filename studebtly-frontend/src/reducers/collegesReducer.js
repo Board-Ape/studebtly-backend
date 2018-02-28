@@ -1,7 +1,8 @@
-const collegesData = (state = {}, action) => {
+const collegesData = (state = [], action) => {
+  console.log('Inside collegesReducer');
   switch (action.type) {
   case 'GET_COLLEGES':
-    return action.colleges;
+    return action.collegesArray;
   default:
     return state;
   }

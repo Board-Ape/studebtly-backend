@@ -1,13 +1,12 @@
-export const getColleges = colleges => ({
+import { fetchCollegesData } from '../helper/apiCalls/apiCalls';
+
+export const getColleges = (collegesArray) => ({
   type: 'GET_COLLEGES',
-  colleges
+  collegesArray
 });
 
-export const fetchColleges = () => dispatch => {
-  console.log('Inside actions fetch');
-  fetch('http://localhost:3001/api/v1/colleges')
-    .then(response => response.json())
-    .then(parsedResponse => dispatch(getColleges(parsedResponse)))
-    //eslint-disable-next-line
-    .catch(error => console.log(`Error has occurred: ${error}`));
+export const fetchColleges = () => async(dispatch) => {
+  console.log('Inside fetchColleges');
+  const parsedResponse = await fetchCollegesData();
+  dispatch(getColleges(parsedResponse));
 };
