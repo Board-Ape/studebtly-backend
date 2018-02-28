@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import './CollegesPage.css';
 import { fetchColleges } from '../../actions';
 import { connect } from 'react-redux';
-import CollegesCard from '../../components/CollegesCard/CollegesCard';
+import CollegesCard from '../CollegesCard/CollegesCard';
 
 class CollegesPage extends Component {
   constructor() {
@@ -19,7 +19,6 @@ class CollegesPage extends Component {
   }
 
   createCollegesCard = () => {
-    console.log('Hello');
     const { colleges } = this.props;
     return colleges.map( (college, index) =>
       <CollegesCard college={college} key={index} />

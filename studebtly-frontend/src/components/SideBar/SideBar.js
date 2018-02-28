@@ -9,7 +9,7 @@ export default class SideBar extends Component {
       <aside id='sidebar'>
         <section id='sidebar-top-section'>
           <h1 id='sidebar-app-title'>
-            <span id='sidebar-dr'>STUDEBT</span>
+            <span id='sidebar-dr'>STUDEBT.</span>
             <span id='sidebar-nks'>LY</span>
           </h1>
         </section>

@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import colleges from './collegesReducer.js';
+import collegesData from './collegesReducer.js';
 
 const rootReducer = combineReducers({
-  colleges
+  collegesData
 });
 
 export default rootReducer;

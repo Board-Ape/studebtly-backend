@@ -1,4 +1,4 @@
-const colleges = (state = {}, action) => {
+const collegesData = (state = {}, action) => {
   switch (action.type) {
   case 'GET_COLLEGES':
     return action.colleges;
@@ -7,4 +7,4 @@ const colleges = (state = {}, action) => {
   }
 };
 
-export default colleges;
+export default collegesData;

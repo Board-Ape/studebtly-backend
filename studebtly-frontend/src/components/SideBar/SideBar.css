@@ -1,4 +1,10 @@
 #sidebar {
+  padding-top: 50px;
+  width: 12%;
+  height: 100%;
+}
+
+/* #sidebar {
   width: 12%;
   height: 100%; }
 
@@ -64,4 +70,4 @@
 .links-text:hover {
   cursor: pointer;
   font-weight: normal;
-  font-size: 1.6em; }
+  font-size: 1.6em; } */

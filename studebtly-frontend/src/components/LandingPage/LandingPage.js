@@ -4,7 +4,7 @@ import './LandingPage.css';
 
 class LandingPage extends Component{
 
-  render(){
+  render () {
     return (
       <div className='particle-container'>
         <Particles

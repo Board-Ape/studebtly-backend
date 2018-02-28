@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './UserPage.css';
-import PropTypes from 'prop-types';
 import SideBar from '../SideBar/SideBar.js';
 import InformationPage from '../InformationPage/InformationPage.js';
 
