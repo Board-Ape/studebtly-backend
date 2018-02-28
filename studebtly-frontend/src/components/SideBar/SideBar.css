@@ -1,0 +1,73 @@
+#sidebar {
+  padding-top: 50px;
+  width: 12%;
+  height: 100%;
+}
+
+/* #sidebar {
+  width: 12%;
+  height: 100%; }
+
+#sidebar-top-section {
+  width: 100%;
+  background-color: #F7F7F5;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+#sidebar-bottom-section {
+  width: 100%;
+  height: 80%;
+  background-color: #8b0000;
+  padding-top: 0px; }
+
+#sidebar-logo {
+  height: 40px;
+  width: 40px; }
+
+#sidebar-app-title {
+  font-size: 3em;
+  font-family: "Quicksand", sans-serif;
+  font-weight: lighter;
+  color: #8b0000; }
+
+#sidebar-dr {
+  position: relative;
+  left: 5px; }
+
+#sidebar-nks {
+  position: relative;
+  right: 5px; }
+
+#sidebar-nav-links-container {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+#nav-links-box {
+  margin: 0;
+  padding: 0;
+  height: 80%;
+  width: 80%;
+  text-align: center;
+  font-family: "Quicksand", sans-serif; }
+
+.links {
+  list-style: none;
+  text-align: left;
+  width: 70%;
+  margin: 0 auto;
+  height: 25%; }
+
+.links-text {
+  font-size: 1.5em;
+  color: #F7F7F5;
+  font-weight: 300; }
+
+.links-text:hover {
+  cursor: pointer;
+  font-weight: normal;
+  font-size: 1.6em; } */
