@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import './InformationPage.css';
-import CollegesPage from '../../containers/CollegesPage/CollegesPage.js';
+import CollegesPage from '../CollegesPage/CollegesPage.js';
 import HomePage from '../HomePage/HomePage.js';
 
 export default class InformationPage extends Component {

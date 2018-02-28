@@ -4,7 +4,6 @@ import './App.css';
 import NavBar from '../NavBar/NavBar';
 import HomePage from '../HomePage/HomePage';
 import UserPage from '../UserPage/UserPage';
-// import CollegesPage from '../../containers/CollegesPage/CollegesPage';
 
 class App extends Component {
   render() {

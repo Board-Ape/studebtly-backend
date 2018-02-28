@@ -15,11 +15,11 @@ class CollegesPage extends Component {
   }
 
   componentDidMount() {
-    console.log('hello');
     this.props.fetchColleges();
   }
 
   createCollegesCard = () => {
+    console.log('Hello');
     const { colleges } = this.props;
     return colleges.map( (college, index) =>
       <CollegesCard college={college} key={index} />
