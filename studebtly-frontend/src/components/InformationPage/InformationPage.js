@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import './InformationPage.css';
-import CollegesContainer from '../../containers/CollegesContainer/CollegesContainer.js';
+import CollegesPage from '../../containers/CollegesPage/CollegesPage.js';
 import HomePage from '../HomePage/HomePage.js';
 
 export default class InformationPage extends Component {
@@ -29,7 +29,7 @@ export default class InformationPage extends Component {
 
   renderPage = () => {
     if (this.state.CB === true) {
-      return <CollegesContainer />;
+      return <CollegesPage />;
     }
     if (this.state.HB === true) {
       return <HomePage />;

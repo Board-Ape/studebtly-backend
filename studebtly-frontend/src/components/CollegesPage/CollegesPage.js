@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import './CollegesContainer.css';
+import './CollegesPage.css';
 import { fetchColleges } from '../../actions';
 import { connect } from 'react-redux';
 import CollegesCard from '../../components/CollegesCard/CollegesCard';
 
-class CollegesContainer extends Component {
+class CollegesPage extends Component {
   constructor() {
     super();
     this.state = {
@@ -41,7 +41,7 @@ class CollegesContainer extends Component {
   }
 }
 
-CollegesContainer.propTypes = {
+CollegesPage.propTypes = {
   fetchColleges: PropTypes.func,
   colleges: PropTypes.array
 };
@@ -54,4 +54,4 @@ const mapDispatchToProps = dispatch => ({
   fetchColleges: () => dispatch(fetchColleges())
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(CollegesContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(CollegesPage);
