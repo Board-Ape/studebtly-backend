@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 import './App.css';
-import NavBar from '../../components/NavBar/NavBar';
-import HomePage from '../../components/HomePage/HomePage';
-import UserPage from '../../components/UserPage/UserPage';
+import NavBar from '../NavBar/NavBar';
+import HomePage from '../HomePage/HomePage';
+import UserPage from '../UserPage/UserPage';
 import CollegesContainer from '../../containers/CollegesContainer/CollegesContainer';
 
 class App extends Component {
