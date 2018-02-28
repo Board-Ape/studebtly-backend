@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import './InformationPage.css';
 import CollegesPage from '../CollegesPage/CollegesPage.js';
-import HomePage from '../HomePage/HomePage.js';
+import LandingPage from '../LandingPage/LandingPage.js';
 
 export default class InformationPage extends Component {
   constructor() {
@@ -32,7 +32,7 @@ export default class InformationPage extends Component {
       return <CollegesPage />;
     }
     if (this.state.HB === true) {
-      return <HomePage />;
+      return <LandingPage />;
     }
   };
 

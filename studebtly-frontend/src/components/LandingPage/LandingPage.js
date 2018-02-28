@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import Particles from 'react-particles-js';
-import './HomePage.css';
+import './LandingPage.css';
 
-class HomePage extends Component{
+class LandingPage extends Component{
 
   render(){
     return (
@@ -125,4 +125,4 @@ class HomePage extends Component{
   }
 }
 
-export default HomePage;
+export default LandingPage;
