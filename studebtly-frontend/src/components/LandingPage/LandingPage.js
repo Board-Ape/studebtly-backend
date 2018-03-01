@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Particles from 'react-particles-js';
+import { Link } from 'react-router-dom';
 import './LandingPage.css';
 
 class LandingPage extends Component{
@@ -7,6 +8,8 @@ class LandingPage extends Component{
   render () {
     return (
       <div className='particle-container'>
+        <p className='userpage-link'>Welome to Studebt.ly:<br/>Where we care about your finanacial success.</p>
+        <p className='userpage-link-click'><Link className='nav-links' to='/userpage'>Click to Explore</Link></p>
         <Particles
           style={{
             background: "#77A0A9"

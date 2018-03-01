@@ -4,10 +4,9 @@ import './NavBar.css';
 
 const NavBar = () => {
   return (
-    <header>
+    <header className='header'>
       <div className='header-container'>
-        <p><Link className='nav-links' to='/'>Home</Link></p>
-        <p><Link className='nav-links' to='/userpage'>User Page</Link></p>
+        <Link className='nav-links' to='/'><img className='navbar-icon' src={require('./money-icon.png')} alt="Location icon png"/></Link>
       </div>
     </header>
   );

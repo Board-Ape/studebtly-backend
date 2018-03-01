@@ -1,7 +1,20 @@
 #sidebar {
-  padding-top: 50px;
+  padding-top: 80px;
+  padding-left: 10px;
   width: 12%;
   height: 100%;
+}
+
+#nav-links-box {
+  padding-left: 0px;
+}
+
+.links {
+  list-style: none;
+  text-align: left;
+  width: 70%;
+  margin: 0 auto;
+  height: 25%;
 }
 
 /* #sidebar {
@@ -55,12 +68,7 @@
   text-align: center;
   font-family: "Quicksand", sans-serif; }
 
-.links {
-  list-style: none;
-  text-align: left;
-  width: 70%;
-  margin: 0 auto;
-  height: 25%; }
+
 
 .links-text {
   font-size: 1.5em;
