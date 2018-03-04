@@ -39,7 +39,7 @@ export class CollegesCard extends Component {
 
   handleFavorites = (colleges) => {
     this.setState({active: true});
-    if (!this.filterFavorites(colleges.name).length) {
+    if (!this.filterFavorites(colleges.college.name).length) {
       return this.props.addFavorite(colleges);
     } else {
       this.setState({active: false});
@@ -48,6 +48,7 @@ export class CollegesCard extends Component {
   }
 
   render() {
+    console.log('this.props', this.props);
     return (
       <div className='all-cards-container' id={this.props.college.id}>
         <div className='all-cards'>
