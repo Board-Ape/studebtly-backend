@@ -17,6 +17,22 @@
   flex-wrap: wrap;
 }
 
+.favorite {
+  position: relative;
+  left: 81.75%;
+  height: 16px;
+  width: 55px;
+  padding: 8px;
+  border-radius: 5px;;
+  border: 1px black solid; }
+
+.favorite:hover {
+  border: 1px #C10101 solid;
+  cursor: pointer; }
+
+.selected {
+  border: 2px #260BDF solid; }
+
 .school {
   margin: auto;
   width: 90%;
@@ -27,6 +43,7 @@
 }
 
 .school-name {
+  margin-top: 0px;
   margin-bottom: 0px;
   font-size: 30px;
   font-weight: 400;
