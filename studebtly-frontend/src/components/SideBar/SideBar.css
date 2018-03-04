@@ -7,6 +7,7 @@
 
 #nav-links-box {
   padding-left: 0px;
+  padding-top: 1px;
 }
 
 .links {
@@ -15,6 +16,10 @@
   width: 70%;
   margin: 0 auto;
   height: 25%;
+}
+
+.particle-container {
+  padding-top: 0;
 }
 
 /* #sidebar {

@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import './CollegesPage.css';
-import { fetchColleges } from '../../actions';
+import { fetchColleges, addFavorites, deleteFavorites } from '../../actions';
 import { connect } from 'react-redux';
 import CollegesCard from '../CollegesCard/CollegesCard';
 
 class CollegesPage extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       title: 'Colleges',
       description: 'Explore the colleges below'
