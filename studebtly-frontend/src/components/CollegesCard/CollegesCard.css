@@ -22,6 +22,7 @@
   margin-top: 1px;
   position: relative;
   left: 81%;
+  z-index: 1;
   height: 16px;
   width: 55px;
   padding: 8px;
