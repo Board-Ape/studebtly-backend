@@ -4,6 +4,6 @@ export const fetchCollegesData = async() => {
     const parsedResponse = await initialFetch.json();
     return parsedResponse;
   } catch (type) {
-    return Error('Fetch Failed to retrieve collegs');
+    return Error('Fetch Failed to retrieve colleges');
   }
 };

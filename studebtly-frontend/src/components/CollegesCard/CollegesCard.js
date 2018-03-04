@@ -49,21 +49,21 @@ export class CollegesCard extends Component {
 
   render() {
     return (
-      <div className='all-cards-container' id={this.id}>
+      <div className='all-cards-container' id={this.props.college.id}>
         <div className='all-cards'>
           <span
             className={this.state.active === false ? 'favorite' : 'favorite selected'}
             onClick={() => this.handleFavorites(this.props)}>
             Favorite
           </span>
-          <h1 className='school school-name'>{this.name}</h1>
+          <h1 className='school school-name'>{this.props.college.name}</h1>
           <h3 className='school location school-state'>
-            <img className='placeholder-icon' src={require('./placeholder.png')} alt="Location icon png"/> {this.city}, {this.state}. {this.zip}
+            <img className='placeholder-icon' src={require('./placeholder.png')} alt="Location icon png"/> {this.props.college.city}, {this.props.college.state}. {this.props.college.zip}
           </h3>
-          <h2 className='school school-in-state-tuition'>Tuition In-State: ${this.tuition_in_state}</h2>
-          <h2 className='school school-out-of-state-tuition'>Tuition Out-Of-State: ${this.tuition_out_of_state}</h2>
+          <h2 className='school school-in-state-tuition'>Tuition In-State: ${this.props.college.tuition_in_state}</h2>
+          <h2 className='school school-out-of-state-tuition'>Tuition Out-Of-State: ${this.props.college.tuition_out_of_state}</h2>
           <div className='school url'>
-            <a className='location school-url' href={this.url} target='_blank'>Visit Their Website</a>
+            <a className='location school-url' href={this.props.college.url} target='_blank'>Visit Their Website</a>
           </div>
         </div>
       </div>
@@ -86,7 +86,7 @@ export const mapDispatchToProps = (dispatch) => {
 
 
 CollegesCard.propTypes = {
-  colleges: PropTypes.object
+  colleges: PropTypes.array
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(CollegesCard);
