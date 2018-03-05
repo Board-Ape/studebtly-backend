@@ -5,11 +5,11 @@ machine:
     version: 8.1.2
 
 environment:
-  DATABASE_URL: postgresql://@127.0.0.1:5432/companies_test
+  DATABASE_URL: postgresql://@127.0.0.1:5432/studebtly_test
 
 database:
   override:
-    - sudo -u postgres psql -p 5432 -c "create database companies_test;"
+    - sudo -u postgres psql -p 5432 -c "create database studebtly_test;"
     - knex migrate:latest
 
 test:
