@@ -9,6 +9,8 @@ class LandingPage extends Component{
     return (
       <div className='particle-container'>
         <p className='userpage-link'>Welome to Studebt.ly:<br/>Where we care about your finanacial success.</p>
+        <input className='user-name' name="userName" type="text" placeholder="Enter Username"/>
+        <input className='user-password' name="userName" type="text" placeholder="Enter Password"/>
         <p className='userpage-link-click'><Link className='nav-links' to='/userpage'>Click to Explore</Link></p>
         <Particles
           style={{
