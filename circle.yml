@@ -21,3 +21,4 @@ deployment:
     branch: master
     heroku:
       appname: studebtly
+      
