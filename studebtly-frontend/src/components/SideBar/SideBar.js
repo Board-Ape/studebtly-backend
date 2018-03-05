@@ -34,6 +34,7 @@ export default class SideBar extends Component {
             </ul>
           </nav>
         </section>
+        <p className="welcome-greeting">WELCOME: 123 <br/>Please explore the colleges tab.</p>
       </aside>
     );
   }
