@@ -4,7 +4,7 @@
   "description": "",
   "main": "dataRequest.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha --exit",
     "start": "concurrently \"npm run server\" \"cd studebtly-frontend && npm start\"",
     "server": "nodemon server.js",
     "client": "node start-client.js"
@@ -14,13 +14,15 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.2",
-    "chai": "^4.1.2",
-    "chai-http": "^3.0.0",
     "concurrently": "^3.5.1",
     "dotenv": "^5.0.1",
     "express": "^4.16.2",
     "knex": "^0.14.4",
-    "mocha": "^5.0.1",
     "pg": "^7.4.1"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "chai-http": "git+https://github.com/chaijs/chai-http.git#3ea4524",
+    "mocha": "^5.0.1"
   }
 }
