@@ -9,6 +9,7 @@ export default class UserPage extends Component {
     super();
     this.state = {
       collegesBool: null,
+      favoritesBool: null,
       homeBool: true
     };
   }
@@ -16,6 +17,7 @@ export default class UserPage extends Component {
   homeOnClick = () => {
     this.setState({
       collegesBool: false,
+      favoritesBool: false,
       homeBool: true
     });
   }
@@ -23,19 +25,31 @@ export default class UserPage extends Component {
   collegesOnClick = () => {
     this.setState({
       collegesBool: true,
+      favoritesBool: false,
+      homeBool: false
+    });
+  }
+
+  favoritesOnClick = () => {
+    this.setState({
+      collegesBool: false,
+      favoritesBool: true,
       homeBool: false
     });
   }
 
   render() {
-    const { collegesBool, homeBool } = this.state;
+    const { collegesBool, favoritesBool, homeBool } = this.state;
     return (
       <section id='userpage-container'>
         <SideBar
           collegesOnClick={this.collegesOnClick}
-          homeOnClick={this.homeOnClick} />
+          favoritesOnClick={this.favoritesOnClick}
+          homeOnClick={this.homeOnClick}
+        />
         <InformationPage
           CB={collegesBool}
+          FB={favoritesBool}
           HB={homeBool} />
       </section>
     );

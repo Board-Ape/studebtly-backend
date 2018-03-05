@@ -2,6 +2,7 @@
   display: inline-flex;
   justify-content: space-between;
   margin: 80px auto -60px auto;
+  border: 2px black solid;
 }
 
 .all-cards {
@@ -18,20 +19,25 @@
 }
 
 .favorite {
+  margin-top: 1px;
   position: relative;
-  left: 81.75%;
+  left: 81%;
+  z-index: 1;
   height: 16px;
   width: 55px;
   padding: 8px;
-  border-radius: 5px;;
-  border: 1px black solid; }
+  border-radius: 5px;
+  border: 2px black solid;
+}
 
 .favorite:hover {
-  border: 1px #C10101 solid;
-  cursor: pointer; }
+  border: 2px #260BDF solid;
+  cursor: pointer;
+}
 
 .selected {
-  border: 2px #260BDF solid; }
+  border: 2px #260BDF solid;
+}
 
 .school {
   margin: auto;

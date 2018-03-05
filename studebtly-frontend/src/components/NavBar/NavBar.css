@@ -9,6 +9,7 @@ font-weight: 400; */
   background-color: #AFD0BF;
   font-size: 26px;
   position: fixed;
+  z-index: 2;
 }
 
 .header-container {

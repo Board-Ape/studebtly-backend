@@ -25,7 +25,9 @@ export default class SideBar extends Component {
                 </p>
               </li>
               <li className='links'>
-                <p className='links-text'>
+                <p
+                  className='links-text'
+                  onClick={() => this.props.favoritesOnClick()}>
                   FAVORITES
                 </p>
               </li>

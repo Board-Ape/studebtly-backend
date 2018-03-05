@@ -29,7 +29,7 @@ export class CollegesCard extends Component {
 
   render() {
     return (
-      <div className='all-cards-container' id={this.props.college.id}>
+      <div className='all-cards-container'>
         <div className='all-cards'>
           <span
             className={this.state.active === false ? 'favorite' : 'favorite selected'}
